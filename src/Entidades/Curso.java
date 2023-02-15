@@ -1,3 +1,7 @@
+package Entidades;
+
+import java.util.Arrays;
+
 public class Curso {
     private String nombreCurso;
     private int cantidadHorasDia;
@@ -5,7 +9,11 @@ public class Curso {
     private String turno;
     private int precioHora;
     private int alumnos;
-    String alumnosArray [] = new String [5];
+    int cantidadAlumnos = 5;
+    String alumnosArray [] = new String [cantidadAlumnos];
+
+    public Curso() {
+    }
 
     public Curso(String nombreCurso, int cantidadHorasDia, int cantidadDiasSemanas, String turno, int precioHora, int alumnos, String[] alumnosArray) {
         this.nombreCurso = nombreCurso;
@@ -62,6 +70,7 @@ public class Curso {
     }
 
     public void setAlumnos(int alumnos) {
+        if (alumnos<5)
         this.alumnos = alumnos;
     }
 
@@ -71,5 +80,19 @@ public class Curso {
 
     public void setAlumnosArray(String[] alumnosArray) {
         this.alumnosArray = alumnosArray;
+    }
+
+    @Override
+    public String toString() {
+        return "Curso{" +
+                "nombreCurso='" + nombreCurso + '\'' +
+                ", cantidadHorasDia=" + cantidadHorasDia +
+                ", cantidadDiasSemanas=" + cantidadDiasSemanas +
+                ", turno='" + turno + '\'' +
+                ", precioHora=" + precioHora +
+                ", alumnos=" + alumnos +
+                ", cantidadAlumnos=" + cantidadAlumnos +
+                ", alumnosArray=" + Arrays.toString ( alumnosArray ) +
+                '}';
     }
 }

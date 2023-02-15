@@ -1,5 +1,12 @@
+package Entidades;
+
+import Servicio.ServicioCurso;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("");
+
+        ServicioCurso s1 = new ServicioCurso ();
+        s1.menu ();
+
     }
 }
